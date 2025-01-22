@@ -21,17 +21,19 @@ function App() {
     });
   };
 
-  const handleCloseModal = () => {
-    setIsOpen(false);
-    setFormData({
-      username: "",
-      email: "",
-      phone: "",
-      dob: "",
-    });
-    setEmailError("");
-    setPhoneError("");
-    setDobError("");
+  const handleCloseModal = (e) => {
+    if (e.target.classList.contains("modal")) {
+      setIsOpen(false);
+      setFormData({
+        username: "",
+        email: "",
+        phone: "",
+        dob: "",
+      });
+      setEmailError("");
+      setPhoneError("");
+      setDobError("");
+    }
   };
 
   const handleSubmit = (e) => {
@@ -72,7 +74,7 @@ function App() {
     }
 
     alert("Form submitted successfully!");
-    handleCloseModal();
+    handleCloseModal({ target: { classList: ['modal'] } }); // Close modal on successful form submission
   };
 
   return (
