@@ -50,7 +50,7 @@ const App = () => {
       <h1>User details Modal</h1>
       <button onClick={openModal}>Open Form</button>
       {isModalOpen && (
-        <div className="modal" onClick={closeModal}>
+        <div className="notmodal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <h2>Fill details</h2>
             <form onSubmit={handleSubmit}>

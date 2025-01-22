@@ -28,7 +28,7 @@ button:hover {
   background-color: #45a049;
 }
 
-.modal {
+.notmodal {
   display: flex;
   justify-content: center;
   align-items: center;
